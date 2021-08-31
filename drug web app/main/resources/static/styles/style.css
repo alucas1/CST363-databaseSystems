@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(322deg, rgba(43,46,39,1) 29%, rgba(28,28,28,1) 29%, rgba(28,28,28,1) 40%, rgba(43,46,39,1) 40%, rgba(43,46,39,1) 48%, rgba(28,28,28,1) 48%, rgba(28,28,28,1) 92%, rgba(31, 58, 147, 1) 92%, rgba(31, 58, 147, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+p {
+    color: black;
+    font-family: 'Domine', serif;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 700;
+    text-transform: capitalize;
+    position: relative;
+}
+
+h1:before {
+    content: '';
+    position: absolute;
+    height: 0.2em;
+    width: 70%;
+    background: rgba(31, 58, 147, 1);
+    bottom: 0.15em;
+    z-index: -1;
+}
+
+h1 + p {
+    color: white;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.report-container {
+    display: flex;
+    width: 55%;
+    margin-top: 10em;
+    align-items: center;
+}
+
+.report-info {
+    border-left: 4px solid rgba(31, 58, 147, 1);
+    margin: 0;
+    margin-top: 1em;
+    padding-left: 4em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    margin-top: 5em;
+}
+
+.report-info p {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+.report-table {
+    border: 1px solid black;
+    background: white;
+    color: black;
+    border-radius: 0.5em;
+    text-align: center;
+    padding: 2em;
+    align-self: flex-start;
+    margin-left: auto;
+}
+.prescription-section {
+    width: 100%;
+}
+
+.prescription-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prescription-table {
+    background: whitesmoke;
+    color: rgb(36, 35, 35);
+    border-radius: 0.5em;
+    padding: 2em 4em;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+    font-size: 1.3em;
+    line-height: 2.5;
+    text-align: left;
+    margin-top: 2em;
+}
+
+.prescription-form {
+    background: whitesmoke;
+    padding: 1em 2em;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+    margin-top: 2em;
+}
+
+label {
+    width: 35%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    color: #1f1f1f;
+    cursor: pointer;
+    display: flex;
+    width: 55%;
+    justify-content: space-between;
+    position: relative;
+}
+
+form p {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    align-content: flex-end;
+    padding: 0.75em;
+}
+
+.prescription-form span {
+    width: 100%;
+}
+
+.prescription-form-title {
+    margin-top: 1em;
+}
+
+input {
+    border: 0;
+    border-bottom: 0.1em solid #1792D2;
+    margin-bottom: 1em;
+    transform: scale(1);
+    transition: transform 250ms;
+    outline: none;
+    height: 2em;
+    padding: 0 0.5em;
+    transition: border-color 0.5s;
+}
+
+input:focus {
+    transform: scale(1.05);
+    border-bottom: 0.2em solid blue;
+}
+
+input:focus {
+    transform: scale(1.05);
+}
+
+input:required {
+    box-shadow: none;
+}
+
+input:required:focus {
+    border-width: 2px;
+}
+
+input:hover {
+    border-color:blue;
+}
+
+.prescription-form p:last-of-type {
+    margin-bottom: 1.125em;
+}
+
+button {
+    display: inline-block;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 1.25em 2.5em;
+    font-size: 0.652rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button {
+    background-image: linear-gradient(to left, #1792D2, #1e86be);
+    color: #FFF;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+button:focus,
+button:hover {
+    transform: scale(1.05);
+}
+
+.lbl {
+    width: 200px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+td.lbl {
+    font-family: 'Domine', serif;
+    color: #1f1f1f;
+}
+
+.lbl + td {
+    margin-left: 1em;
+    width: 300px;
+    color: #1f1f1f;
+    overflow-wrap: break-word;
+    display: inline-block;
+    line-height: 1.2;
+    position: relative;
+}
+
+th {
+    padding-bottom: 2em;
+    text-decoration: underline;
+}
+
+.fda-form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 1.5em;
+    width: 70%;
+}
+
+.fda-form-title {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.fda-form p {
+    display: block;
+    width: 100%;
+}
+
+.fda-form .lbl {
+    width: 100%;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0.5em;
+}
+
+.fda-form input,
+.pharmacy-form input {
+    width: 150px;
+    margin-right: 1.5em;
+}
+
+.fda-form .lbl {
+    transition: all 0.5s;
+}
+
+.fda-form .lbl:focus,
+.fda-form .lbl:hover {
+    border-color: blue;
+}
+
+
+.fda-form section {
+    padding: 1.5em;
+    background: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.fda-form-input-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.fda-form button
+.pharmacy-form button {
+    align-self: center;
+    padding: 1.25em 2.5em;
+}
+
+.fda-form-instructions {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1em !important;
+    text-align: center;
+}
+
+.fda-form section p:last-of-type,
+.pharmacy-form section p:last-of-type {
+    margin-bottom: 2em;
+}
+
+.system-title {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.system-nav {
+    background: whitesmoke;
+    padding: 2.5em 3em;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.system-nav p:first-child {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    transition: all transform 0.5s;
+    padding-left: 2em;
+    border-left: 4px solid lightblue;
+    font-size: 1.25rem;
+    transition: border-color 0.25s, color 0.25s;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+}
+
+a:focus,
+a:hover {
+    color: violet;
+    text-decoration: underline;
+    border-left: 4px solid blue;
+}
+
+a:last-child {
+    margin-bottom: 2em !important;
+}
+
+.system-nav a {
+    margin-bottom: 3em;
+}
+
+.pharmacy-form-title {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.pharmacy-form {
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.pharmacy-form-instructions {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5em !important;
+}
+
+.pharmacy-form section {
+    padding: 1.5em;
+    background: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pharmacy-form-input-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: space-between;
+    width: 80%;
+}
+
+.pharmacy-form-input-container .lbl {
+    width: 100%;
+}
+
+input[type="date"] {
+    text-align: center;
+}
